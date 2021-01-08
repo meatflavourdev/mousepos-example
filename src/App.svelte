@@ -12,10 +12,7 @@
   // All Yjs types must be embedded in a Y.Doc
   const ydoc = new Y.Doc();
 
-  const wsUrl =
-    window.location.hostname === 'localhost'
-      ? 'ws://localhost:5001'
-      : 'ws://2dfc6998bfab.ngrok.io';
+  const wsUrl = 'ws://2dfc6998bfab.ngrok.io';
   // Connect our Y.Doc to the sync server. Note that you could also use p2p
   // via webrtc (due to Yjs' CRDT convergence algorithm, no server necessary).
   new WebsocketProvider(wsUrl, 'example', ydoc);
