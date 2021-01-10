@@ -12,7 +12,10 @@
   // All Yjs types must be embedded in a Y.Doc
   const ydoc = new Y.Doc();
 
-  const wsUrl = 'wss://143.110.155.245';
+  const yhost = process.env.YHOST;
+  const yport = process.env.YPORT;
+
+  const wsUrl = yhost && yport ? yhost + yport : 'localhost:5001';
   // Connect our Y.Doc to the sync server. Note that you could also use p2p
   // via webrtc (due to Yjs' CRDT convergence algorithm, no server necessary).
   new WebsocketProvider(wsUrl, 'example', ydoc);
