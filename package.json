@@ -19,7 +19,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
+    "sirv-cli": "^1.0.14",
     "snowpack": "^2.18.5",
     "svelt-yjs": "^0.2.1",
     "y-websocket": "^1.3.5",
